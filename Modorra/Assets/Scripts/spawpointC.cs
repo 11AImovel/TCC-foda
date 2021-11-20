@@ -11,14 +11,19 @@ public class spawpointC : MonoBehaviour
     GameObject player;
     dano dano_;
 
+    TrocarCena TC;
+
     void Start()
     {
+        TC = GetComponent<TrocarCena>();
         player = GameObject.FindGameObjectWithTag("Player");
+        dano_ = GetComponent<dano>();
+    
     }
 
     void Update()
     {
-        if(dano.VidaPlayer <= 0)
+        if(dano_.vida <= 0)
         {
            StartCoroutine("TimerMorte");
         }
@@ -32,7 +37,13 @@ public class spawpointC : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("dead");
             TM = true;
           yield return new WaitForSeconds(1.800f);
+          if(dano_.vida <= 0)
+          {
+          
           SceneManager.LoadScene(SpawpointAtivo);
+          
+          }
+          
           TM = false;
       }
     }

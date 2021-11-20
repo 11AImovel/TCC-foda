@@ -46,6 +46,7 @@ public class MovimentoP : MonoBehaviour
      if(PodePular && Input.GetKey(KeyCode.Space) && !Atordoado)
      {
        PodePular = false;
+       rb.velocity = new Vector2(0,0);
        rb.AddForce(transform.up * ForçaPulo ,ForceMode2D.Impulse);
        //rb.velocity = new Vector3(0, 10, 0);
        //_Rigidbody.AddForce(m_NewForce, ForceMode.Acceleration);
@@ -65,16 +66,16 @@ public class MovimentoP : MonoBehaviour
        
    }
 
-   void OnTriggerEnter2D(Collider2D colisor)
+   void OnTriggerStay2D(Collider2D colisor)
     {
         if(colisor.gameObject.tag == "chao")
         {
-
           PodePular = true;
         } 
         
     }
 
+    
     private IEnumerator TAtordoado()
     {
       if(!ta)
