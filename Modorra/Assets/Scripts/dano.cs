@@ -35,6 +35,7 @@ public class dano : MonoBehaviour
 
     void Update()
     {
+        VidaPlayer = vida;
         if(NPodeDano)
         {
             StartCoroutine("TTEmpoImun");

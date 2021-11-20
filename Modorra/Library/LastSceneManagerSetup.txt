@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/TestDialog.unity
+- path: Assets/Scenes/FL2-1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

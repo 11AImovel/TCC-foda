@@ -12,6 +12,7 @@ TagManager:
   - coracao
   - CenaControle
   - Pato
+  - dele
   layers:
   - Default
   - TransparentFX

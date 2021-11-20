@@ -34,6 +34,7 @@ public class BaseEneA : MonoBehaviour
             if(player.GetComponent<dano>().vida < 3 && player.GetComponent<dano>().vida > 0)
             {
             player.GetComponent<dano>().vida =player.GetComponent<dano>().vida + VidaAdd;
+            //player.GetComponent<dano>().VidaPlayer = player.GetComponent<dano>().vida;
             }
             
             Destroy(gameObject);
